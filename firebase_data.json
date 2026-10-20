@@ -1,0 +1,104 @@
+{
+  "equipment": {
+    "EQ001": {
+      "category": "Computer",
+      "detail_image": "/assets/images/eq_001_detail.webp",
+      "image_thumbnail": "/assets/images/eq_001_thumb.webp",
+      "location": "อาคาร A ชั้น 3 ห้อง HR",
+      "name": "Computer Desktop Dell OptiPlex",
+      "serial_number": "SN-DELL-2026-001",
+      "status": "Ready",
+      "vendor": "Dell Thailand"
+    },
+    "EQ002": {
+      "category": "Printer",
+      "detail_image": "/assets/images/eq_002_detail.webp",
+      "image_thumbnail": "/assets/images/eq_002_thumb.webp",
+      "location": "อาคาร B ชั้น 1 ห้องการเงิน",
+      "name": "Printer HP LaserJet",
+      "serial_number": "SN-HP-2026-002",
+      "status": "Ready",
+      "vendor": "HP Thailand"
+    },
+    "EQ003": {
+      "category": "Network",
+      "detail_image": "/assets/images/eq_003_detail.webp",
+      "image_thumbnail": "/assets/images/eq_003_thumb.webp",
+      "location": "อาคาร A ชั้น 2 ห้อง Server",
+      "name": "Network Router Cisco",
+      "serial_number": "SN-CISCO-2026-003",
+      "status": "In Repair",
+      "vendor": "Cisco Systems"
+    }
+  },
+  "users": {
+    "U001": {
+      "account_status": "Active",
+      "created_at": "2026-01-10T08:00:00Z",
+      "department": "IT Support",
+      "email": "admin@ssru.ac.th",
+      "first_name": "Admin",
+      "last_name": "System",
+      "password_hash": "$2a$12$eImiTXuWVxfM37uY4JANjO37eXN",
+      "role": "Admin"
+    },
+    "U002": {
+      "account_status": "Active",
+      "created_at": "2026-01-15T09:30:00Z",
+      "department": "Human Resources",
+      "email": "s67122250033@ssru.ac.th",
+      "first_name": "นิธิศ",
+      "last_name": "สุขอยู่",
+      "password_hash": "$2a$12$eImiTXuWVxfM37uY4JANjO37eXN",
+      "role": "User"
+    },
+    "U005": {
+      "account_status": "Active",
+      "created_at": "2026-01-12T10:15:00Z",
+      "department": "IT Maintenance",
+      "email": "tech01@ssru.ac.th",
+      "first_name": "จิตติพัฒน์",
+      "last_name": "จัยสวัสดิ์",
+      "password_hash": "$2a$12$eImiTXuWVxfM37uY4JANjO37eXN",
+      "role": "Technician"
+    }
+  },
+  "repair_tickets": {
+    "TK001": {
+      "assigned_technician_id": "U005",
+      "created_at": "2026-08-28T10:00:00Z",
+      "equipment_id": "EQ001",
+      "issue_type": "Hardware",
+      "problem_description": "เครื่องเปิดไม่ติด มีเสียงร้อง Beep 3 ครั้ง",
+      "problem_image": "/assets/images/issue_tk001.webp",
+      "repair_cost": 0,
+      "status": "Pending",
+      "urgency_level": "High",
+      "user_id": "U002"
+    },
+    "TK002": {
+      "assigned_technician_id": "U005",
+      "created_at": "2026-08-29T11:30:00Z",
+      "equipment_id": "EQ002",
+      "issue_type": "Hardware",
+      "problem_description": "กระดาษติดบ่อย และพิมพ์ออกมาเป็นรอยดำ",
+      "problem_image": "/assets/images/issue_tk002.webp",
+      "repair_cost": 450,
+      "status": "In Progress",
+      "urgency_level": "Medium",
+      "user_id": "U002"
+    },
+    "TK003": {
+      "assigned_technician_id": "U005",
+      "created_at": "2026-08-30T14:20:00Z",
+      "equipment_id": "EQ003",
+      "issue_type": "Network",
+      "problem_description": "สัญญาณ Wi-Fi หลุดบ่อย ไฟกะพริบสีแดง",
+      "problem_image": "/assets/images/issue_tk003.webp",
+      "repair_cost": 0,
+      "status": "Pending",
+      "urgency_level": "High",
+      "user_id": "U002"
+    }
+  }
+}

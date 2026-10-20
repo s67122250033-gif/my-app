@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Repair & Tracking System - Presentation PDF</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Kanit', sans-serif;
+    }
+
+    body {
+      background-color: #525659;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .print-btn-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .print-btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: background 0.2s;
+    }
+
+    .print-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .slide {
+      width: 297mm;
+      height: 167mm;
+      background-color: #ffffff;
+      color: #1e293b;
+      padding: 30px 40px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    .slide-header {
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 8px;
+    }
+
+    .slide-title {
+      font-size: 24px;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+
+    .slide-subtitle {
+      font-size: 14px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .slide-body {
+      flex-grow: 1;
+      margin-top: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #334155;
+    }
+
+    .slide-body ul {
+      margin-left: 24px;
+    }
+
+    .slide-body li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .ui-single-layout {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      height: 100%;
+    }
+
+    .ui-text-side {
+      flex: 1;
+    }
+
+    .ui-img-side {
+      flex: 1.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+      background-color: #f8fafc;
+      border-radius: 8px;
+      border: 1px dashed #cbd5e1;
+      padding: 10px;
+    }
+
+    .ui-img-side img {
+      width: 100%;
+      max-height: 115mm;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 1px solid #cbd5e1;
+    }
+
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .print-btn-container {
+        display: none;
+      }
+      .slide {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ พิมพ์ / บันทึกเป็น PDF</button>
+  </div>
+
+  <!-- Slide 1: Cover Page -->
+  <div class="slide">
+    <div></div>
+    <div style="text-align: center; padding: 10px 0;">
+      <h1 style="font-size: 34px; color: #1e3a8a; line-height: 1.3;">ระบบบริหารจัดการและติดตามสถานะ<br>การแจ้งซ่อมอุปกรณ์ไอทีออนไลน์</h1>
+      <p style="font-size: 19px; color: #2563eb; margin-top: 10px; font-weight: 600;">(Online IT Support and Equipment Repair Tracking System)</p>
+      
+      <div style="width: 60px; height: 3px; background: #2563eb; margin: 20px auto;"></div>
+      
+      <div style="display: flex; justify-content: space-around; max-width: 750px; margin: 0 auto; text-align: left; font-size: 16px; color: #334155;">
+        <div>
+          <p style="font-weight: 700; color: #1e3a8a; margin-bottom: 6px;">ผู้จัดทำ:</p>
+          <p>• นายนิธิศ สุขอยู่ (รหัส 67122250033)</p>
+          <p>• นายจิตติพัฒน์ จัยสวัสดิ์ (รหัส 67122250011)</p>
+        </div>
+        <div>
+          <p style="font-weight: 700; color: #1e3a8a; margin-bottom: 6px;">เสนอ:</p>
+          <p>• ผู้ช่วยศาสตราจารย์ ดร. เสถียร จันทร์ปลา</p>
+        </div>
+      </div>
+
+      <p style="font-size: 14px; color: #64748b; margin-top: 25px;">
+        รายวิชา CSD3202 การพัฒนาเว็บแอปพลิเคชัน | สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี<br>
+        มหาวิทยาลัยราชภัฏสวนสุนันทา (ภาคเรียนที่ 1 ปีการศึกษา 2569)
+      </p>
+    </div>
+    <div class="slide-footer">
+      <span>Assignment 5: System Design and Prototype Design</span>
+      <span>Slide 1 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 2: Problem & Objective -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">1. ปัญหาและวัตถุประสงค์ (Problem & Objective)</div>
+      <div class="slide-subtitle">ที่มาความสำคัญและสิ่งที่ระบบเข้ามาแก้ไข</div>
+    </div>
+    <div class="slide-body">
+      <ul>
+        <li><span class="highlight">ปัญหาเดิม:</span> การแจ้งซ่อมด้วยกระดาษล่าช้า ข้อมูลใบแจ้งซ่อมสูญหาย ขาดระบบติดตามสถานะแบบ Real-time และขาดการเก็บประวัติอย่างเป็นระบบ</li>
+        <li><span class="highlight">วัตถุประสงค์หลัก:</span>
+          <ul>
+            <li>พัฒนา Web Application เชื่อมต่อ Firebase Realtime Database ให้ผู้ใช้งานแจ้งซ่อมและติดตามสถานะได้ทันที</li>
+            <li>ช่วยให้ช่างเทคนิคจัดลำดับความสำคัญ และอัปเดตขั้นตอนการซ่อมได้อย่างมีประสิทธิภาพ</li>
+            <li>ช่วยลดภาระงานเอกสารและลดการตอบคำถามผู้ใช้งานเกี่ยวกับสถานะงานซ่อม</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 2 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 3: Dashboard UI -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">2. หน้าหลักและภาพรวมระบบ (Dashboard Overview)</div>
+      <div class="slide-subtitle">หน้าจอแรกสำหรับแสดงสถิติและเมนูทางเข้าหลักของระบบ</div>
+    </div>
+    <div class="slide-body">
+      <div class="ui-single-layout">
+        <div class="ui-text-side">
+          <ul>
+            <li><span class="highlight">Stat Cards:</span> แสดงจำนวนอุปกรณ์ทั้งหมด งานที่รอดำเนินการ และงานที่กำลังซ่อมแซม</li>
+            <li><span class="highlight">Quick Actions:</span> ทางลัดไปยังหน้าแจ้งซ่อมและติดตามสถานะงาน</li>
+            <li><span class="highlight">System Status:</span> แสดงสถานะการให้บริการของระบบแบบ Real-time</li>
+          </ul>
+        </div>
+        <div class="ui-img-side">
+          <img src="image_aa2305.jpg" alt="Dashboard Overview">
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 3 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 4: Equipment Search UI -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">3. รายการและค้นหาอุปกรณ์ (F01 & F02)</div>
+      <div class="slide-subtitle">ค้นหา ตรวจสอบสถานะ และตำแหน่งที่ตั้งของอุปกรณ์ไอที</div>
+    </div>
+    <div class="slide-body">
+      <div class="ui-single-layout">
+        <div class="ui-text-side">
+          <ul>
+            <li><span class="highlight">Search & Filter:</span> ค้นหาด้วยรหัส/ชื่ออุปกรณ์ และกรองตามหมวดหมู่ (Hardware, Peripheral, Network)</li>
+            <li><span class="highlight">Location Tag:</span> ระบุสถานที่ตั้งของอุปกรณ์ เช่น Lab 101, Server Room</li>
+            <li><span class="highlight">Status Indicator:</span> แสดงสถานะความพร้อม เช่น Ready หรือ Under Repair</li>
+          </ul>
+        </div>
+        <div class="ui-img-side">
+          <img src="image_aa2320.jpg.png" alt="Equipment List">
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 4 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 5: Repair Form UI -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">4. ส่งใบแจ้งซ่อม (F03 Repair Ticket Submission)</div>
+      <div class="slide-subtitle">แบบฟอร์มสำหรับผู้ใช้งานในการแจ้งปัญหาอุปกรณ์เสีย</div>
+    </div>
+    <div class="slide-body">
+      <div class="ui-single-layout">
+        <div class="ui-text-side">
+          <ul>
+            <li><span class="highlight">Auto User Info:</span> ดึงชื่อและสิทธิ์ผู้ใช้งานให้อัตโนมัติ</li>
+            <li><span class="highlight">Equipment Selection:</span> เลือกรหัสอุปกรณ์ที่มีปัญหาจาก Dropdown</li>
+            <li><span class="highlight">Priority Level:</span> กำหนดระดับความเร่งด่วน (Low, Normal, High) เพื่อให้ช่างจัดลำดับงาน</li>
+          </ul>
+        </div>
+        <div class="ui-img-side">
+          <img src="image_aa235b.jpg.png" alt="Repair Form">
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 5 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 6: Tracking UI -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">5. ติดตามและอัปเดตสถานะ (F04 & F05)</div>
+      <div class="slide-subtitle">ติดตามการดำเนินงานและอัปเดตสถานะงานซ่อม Real-time</div>
+    </div>
+    <div class="slide-body">
+      <div class="ui-single-layout">
+        <div class="ui-text-side">
+          <ul>
+            <li><span class="highlight">Ticket Tracking:</span> แสดงรหัสใบแจ้งซ่อม รายละเอียดปัญหา และผู้แจ้งเรื่อง</li>
+            <li><span class="highlight">Status Badges:</span> จำแนกสถานะด้วยสีชัดเจน (Pending, In Progress, Completed)</li>
+            <li><span class="highlight">Technician Control:</span> ช่างสามารถเลือกเปลี่ยนสถานะงานซ่อมได้จากหน้านี้โดยตรง</li>
+          </ul>
+        </div>
+        <div class="ui-img-side">
+          <img src="image_aa2362.jpg.png" alt="Track Status">
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 6 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 7: Login UI -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">6. ระบบเข้าสู่ระบบและยืนยันตัวตน (F06 Authentication)</div>
+      <div class="slide-subtitle">จัดการสิทธิ์ผู้ใช้งานและการจำแนกบทบาท (Role-based Access)</div>
+    </div>
+    <div class="slide-body">
+      <div class="ui-single-layout">
+        <div class="ui-text-side">
+          <ul>
+            <li><span class="highlight">Role Access:</span> รองรับการเข้าใช้งานทั้งสิทธิ์ User และ Technician</li>
+            <li><span class="highlight">Demo Helper:</span> มีปุ่มเลือกบัญชีทดสอบเพื่ออำนวยความสะดวกในการทดลองใช้งาน</li>
+            <li><span class="highlight">Security:</span> ระบบตรวจสอบรหัสผ่านและแจ้งเตือนข้อผิดพลาดทันที</li>
+          </ul>
+        </div>
+        <div class="ui-img-side">
+          <img src="image_aa2608.jpg.png" alt="Login Screen">
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 7 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 8: Data Architecture -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">7. โครงสร้างข้อมูล (Data Architecture)</div>
+      <div class="slide-subtitle">การออกแบบโครงสร้างฐานข้อมูล Firebase Realtime Database (Flat Structure)</div>
+    </div>
+    <div class="slide-body">
+      <ul>
+        <li><span class="highlight">Database Model:</span> Denormalized Style เชื่อมโยงด้วย Foreign Key Identification</li>
+        <li><span class="highlight">Nodes หลักในระบบ:</span>
+          <ul>
+            <li><code>equipment</code>: เก็บข้อมูลอุปกรณ์ (EQ001, EQ002...) พร้อมสถานะ เช่น Ready, Under Repair</li>
+            <li><code>users</code>: เก็บข้อมูลผู้ใช้งาน และจำแนกสิทธิ์การใช้งาน (Admin, Technician, User)</li>
+            <li><code>repair_tickets</code>: เก็บข้อมูลใบแจ้งซ่อม (TK001...) ผูกกับ `equipment_id` และ `user_id`</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 8 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 9: Tech Stack -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">8. เทคโนโลยีที่ใช้พัฒนาระบบ (Tech Stack)</div>
+      <div class="slide-subtitle">เครื่องมือและ Framework สำหรับการพัฒนา</div>
+    </div>
+    <div class="slide-body">
+      <ul>
+        <li><span class="highlight">Frontend Framework:</span> React.js + Vite (JSX Component Architecture)</li>
+        <li><span class="highlight">Styling & UI Design:</span> CSS3 / Inline Styles รองรับ Responsive Web Design</li>
+        <li><span class="highlight">Backend & Database:</span> Firebase Realtime Database</li>
+        <li><span class="highlight">Development Tools:</span> Visual Studio Code, Git, GitHub, Firebase Console</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 9 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 10: Conclusion -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-title">9. สรุปผลและแผนการพัฒนาต่อ (Conclusion & Future Work)</div>
+      <div class="slide-subtitle">สรุปความพร้อมระบบและแนวทางพัฒนาในอนาคต</div>
+    </div>
+    <div class="slide-body">
+      <ul>
+        <li><span class="highlight">สรุปผลการดำเนินงาน:</span> พัฒนาหน้าจอตรงตามข้อกำหนด F01-F06 พร้อมเชื่อมต่อ UI และ Routing สมบูรณ์</li>
+        <li><span class="highlight">Future Features (แผนพัฒนาต่อ):</span>
+          <ul>
+            <li>การเชื่อมต่อระบบแจ้งเตือนอัตโนมัติผ่าน LINE Notify เมื่อช่างอัปเดตงาน</li>
+            <li>ระบบประเมินความพึงพอใจและส่งออกเอกสาร PDF ใบเสร็จ/ใบแจ้งซ่อมทางการ</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <span>จัดทำโดย: นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</span>
+      <span>Slide 10 / 11</span>
+    </div>
+  </div>
+
+  <!-- Slide 11: Q&A -->
+  <div class="slide">
+    <div></div>
+    <div style="text-align: center; padding: 30px 0;">
+      <h1 style="font-size: 56px; color: #1e3a8a;">Q & A</h1>
+      <p style="font-size: 22px; color: #2563eb; margin-top: 15px;">ขอบคุณครับ / มีข้อเสนอแนะเพิ่มเติมไหมครับ</p>
+      <div style="margin-top: 25px; font-size: 15px; color: #475569;">
+        <p><strong>ผู้จัดทำ:</strong> นายนิธิศ สุขอยู่ & นายจิตติพัฒน์ จัยสวัสดิ์</p>
+        <p>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏสวนสุนันทา</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>Assignment 5: System Design and Prototype Design</span>
+      <span>Slide 11 / 11</span>
+    </div>
+  </div>
+
+</body>
+</html>

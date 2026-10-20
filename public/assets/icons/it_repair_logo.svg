@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <!-- Icon Group -->
+  <g transform="translate(10, 10)">
+    <!-- Wrench (Repair) -->
+    <path d="M 35,15 C 25,15 17,23 17,33 C 17,39 20,44 24,47 L 10,85 C 8,90 12,95 17,95 C 19,95 21,94 22,92 L 38,54 C 42,56 46,55 50,52 C 60,52 68,44 68,34 C 68,29 65,24 61,21 L 50,32 L 38,32 L 35,15 Z" fill="#0284c7" />
+    <!-- Monitor / Screen (IT) -->
+    <rect x="40" y="20" width="55" height="40" rx="4" ry="4" fill="none" stroke="#0f172a" stroke-width="5" />
+    <path d="M 57,60 L 57,75 M 47,75 L 67,75" stroke="#0f172a" stroke-width="5" stroke-linecap="round" />
+    <!-- Status Check Icon -->
+    <circle cx="80" cy="25" r="10" fill="#22c55e" />
+    <path d="M 75,25 L 78,28 L 85,21" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- System Title Text -->
+  <text x="125" y="55" font-family="'Segoe UI', Sukhumvit Set, sans-serif" font-size="32" font-weight="bold" fill="#0f172a">IT SUPPORT</text>
+  <text x="125" y="85" font-family="'Segoe UI', Sukhumvit Set, sans-serif" font-size="20" font-weight="600" fill="#0284c7" letter-spacing="2">REPAIR &amp; TRACKING</text>
+</svg>

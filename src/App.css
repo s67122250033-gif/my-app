@@ -1,0 +1,311 @@
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0f172a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 18px 50px;
+  color: #ffffff;
+  width: 100vw;
+  border-bottom: 1px solid #334155;
+}
+
+.nav-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #38bdf8;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #94a3b8;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+  background-color: #334155;
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background-color: #2563eb;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.app-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.welcome-banner {
+  background-color: #1e3a8a;
+  border: 1px solid #3b82f6;
+  color: #bfdbfe;
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.info-card, .recommend-card, .form-card {
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  background-color: #1e293b;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #e2e8f0;
+}
+
+.info-card h2, .recommend-card h2, .form-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  color: #38bdf8;
+}
+
+.info-card p, .recommend-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.status-online {
+  display: inline-block;
+  margin-top: 12px;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.status-offline {
+  display: inline-block;
+  margin-top: 12px;
+  color: #f87171;
+  font-weight: bold;
+}
+
+.highlight-text {
+  color: #60a5fa;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.ticket-counter {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* Form Styles & Visibility Fix */
+.form-card {
+  text-align: left;
+  max-width: 550px;
+  margin: 20px auto;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+.form-group input:disabled {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+  border-color: #334155 !important;
+  opacity: 1 !important;
+  font-weight: 600;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1;
+}
+
+.form-group select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c;
+}
+
+.error-message {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #14532d;
+  color: #bbf7d0;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+}
+/* ตกแต่งการแสดงผลคิวแจ้งซ่อมให้เห็นชัดเจน */
+.ticket-counter-large {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin: 10px 0;
+}
+
+.queue-number {
+  color: #38bdf8;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0 4px;
+}
